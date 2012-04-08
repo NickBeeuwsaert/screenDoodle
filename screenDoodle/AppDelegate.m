@@ -51,7 +51,6 @@
 - (void)bringToFront {
     [_window makeKeyAndOrderFront:nil];
     [_window setLevel:NSMainMenuWindowLevel+1];
-    NSLog(@"%d", [_window isMainWindow]);
     [self setActive:YES];
     
 }
@@ -76,11 +75,12 @@
     statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
     [statusItem setMenu:statusMenu];
     [statusItem setImage:
-     [[NSImage alloc ]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"Untitled-1" ofType:@"png"]]];
+     [[NSImage alloc ]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"MenuExtra" ofType:@"png"]]];
+    [statusItem setAlternateImage:
+     [[NSImage alloc ]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"MenuExtra-alt" ofType:@"png"]]];
     [statusItem setHighlightMode:YES];
 }
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    NSLog(@"Terminating!");
     [statusItem release];
 }
 - (IBAction) setColorRed:(id)sender {

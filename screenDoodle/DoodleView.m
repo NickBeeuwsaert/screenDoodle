@@ -136,18 +136,14 @@
             [p lineToPoint:[point pointValue]];
         }
     }
-    [[NSColor whiteColor]set];
+    [[NSColor blackColor]set];
     [p setLineWidth:7];
     [p stroke];
-    [[NSColor blueColor]set];
+    [(NSColor*)currentColor set];
     [p setLineWidth:5];
     [p stroke];
     [p release];
     
     [[self window] invalidateShadow];
-}
-- (void)dealloc {
-    NSLog(@"asdf");
-    [super dealloc];
 }
 @end
