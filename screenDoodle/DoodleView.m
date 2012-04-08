@@ -143,5 +143,8 @@
     
     [[self window] invalidateShadow];
 }
-
+- (void)dealloc {
+    NSLog(@"asdf");
+    [super dealloc];
+}
 @end

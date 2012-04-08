@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014A15AA15315C05000348D8 /* Untitled-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 014A15A915315C05000348D8 /* Untitled-1.png */; };
 		017216D4152F874F00B265E0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017216D3152F874F00B265E0 /* Cocoa.framework */; };
 		017216DE152F874F00B265E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017216DC152F874F00B265E0 /* InfoPlist.strings */; };
 		017216E0152F874F00B265E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 017216DF152F874F00B265E0 /* main.m */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		014A1564152FEF58000348D8 /* screenDoodle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "screenDoodle-Info.plist"; sourceTree = "<group>"; };
+		014A15A915315C05000348D8 /* Untitled-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-1.png"; sourceTree = "<group>"; };
 		017216CF152F874F00B265E0 /* screenDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = screenDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		017216D3152F874F00B265E0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		017216D6152F874F00B265E0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 		017216D9152F874F00B265E0 /* screenDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				014A15A915315C05000348D8 /* Untitled-1.png */,
 				0172170F152FAC6900B265E0 /* DDHotKeyCenter.h */,
 				01721710152FAC6900B265E0 /* DDHotKeyCenter.m */,
 				017216E5152F874F00B265E0 /* AppDelegate.h */,
@@ -246,6 +249,7 @@
 				017216DE152F874F00B265E0 /* InfoPlist.strings in Resources */,
 				017216E4152F874F00B265E0 /* Credits.rtf in Resources */,
 				017216EA152F875000B265E0 /* MainMenu.xib in Resources */,
+				014A15AA15315C05000348D8 /* Untitled-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
