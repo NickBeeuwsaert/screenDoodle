@@ -12,4 +12,5 @@
 @property (assign) NSMutableArray* doodles;
 @property (assign) NSMutableArray* bezierDoodles;
 @property (assign) NSMutableArray* currentDoodle;
+@property (assign) NSColor *currentColor;
 @end

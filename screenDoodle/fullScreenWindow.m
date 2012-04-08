@@ -13,7 +13,7 @@
         NSRect mainDisplayRect = [[NSScreen mainScreen] frame];
         self = [super initWithContentRect: mainDisplayRect styleMask:NSBorderlessWindowMask|NSNonactivatingPanelMask backing:NSBackingStoreBuffered defer:YES];
         if(self){
-            [self setLevel:NSMainMenuWindowLevel+1];
+            //[self setLevel:NSMainMenuWindowLevel+1];
             [self setBackgroundColor:[NSColor clearColor]];
             //[self setAlphaValue:0.5];
             [self setOpaque:NO];

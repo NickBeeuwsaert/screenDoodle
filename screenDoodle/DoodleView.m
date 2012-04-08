@@ -12,6 +12,7 @@
 @synthesize currentDoodle;
 @synthesize bezierDoodles;
 @synthesize doodles;
+@synthesize currentColor;
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -26,9 +27,10 @@
     //currentDoodle = [NSMutableArray array];
 }
 - (void) mouseUp:(NSEvent *)theEvent {
-    [doodles addObject:[[NSArray alloc] initWithArray:currentDoodle copyItems: YES]];
+    NSArray *copiedArray =[[NSArray alloc] initWithArray:currentDoodle copyItems: YES]; 
+    //[doodles addObject:];
     if([currentDoodle count] > 2)
-    [bezierDoodles addObject:[DoodleView interpolateSplines:[[NSArray alloc] initWithArray:currentDoodle copyItems: YES]]];
+        [bezierDoodles addObject:[NSArray arrayWithObjects:currentColor, [DoodleView interpolateSplines:copiedArray], nil]];
     [currentDoodle  removeAllObjects];
     [self setNeedsDisplay:YES];
 }
@@ -76,6 +78,7 @@
     doodles = [[[NSMutableArray alloc] init] retain];
     bezierDoodles = [[[NSMutableArray alloc] init]  retain];
     currentDoodle = [[[NSMutableArray alloc] init] retain];
+    currentColor = [[NSColor redColor] retain];
 }
 - (void)drawRect:(NSRect)dirtyRect
 {
@@ -99,10 +102,10 @@
         [p release];
     }*/
     //begin drawing bezier doodles
-    for(NSArray* d in bezierDoodles){
+    for(NSArray* D in bezierDoodles){
         NSBezierPath * p = [[NSBezierPath bezierPath] retain];
         [p setLineCapStyle:NSRoundLineCapStyle];
-        
+        NSArray *d = [D objectAtIndex:1];
         for(NSInteger i = 0; i < [d count]-1; i++){
             if([p isEmpty]){
                 NSPoint p3 = [[d objectAtIndex:i]pointValue];
@@ -118,7 +121,7 @@
         [[NSColor whiteColor]set];
         [p setLineWidth:7];
         [p stroke];
-        [[NSColor redColor]set];
+        [(NSColor*)[D objectAtIndex:0] set];
         [p setLineWidth:5];
         [p stroke];
         [p release];
