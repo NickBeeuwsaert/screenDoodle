@@ -3,7 +3,7 @@
 //  screenDoodle
 //
 //  Created by Nicholas Beeuwsaert on 4/6/12.
-//  Copyright (c) 2012 Princeton High School. All rights reserved.
+//  Copyright (c) 2012 Nicholas Beeuwsaert. All rights reserved.
 //
 
 #import "fullScreenWindow.h"
