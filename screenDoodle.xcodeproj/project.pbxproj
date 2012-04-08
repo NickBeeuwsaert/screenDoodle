@@ -17,6 +17,10 @@
 		017216F3152F875000B265E0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017216D3152F874F00B265E0 /* Cocoa.framework */; };
 		017216FB152F875000B265E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017216F9152F875000B265E0 /* InfoPlist.strings */; };
 		017216FE152F875000B265E0 /* screenDoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 017216FD152F875000B265E0 /* screenDoodleTests.m */; };
+		01721709152F877C00B265E0 /* fullScreenWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 01721708152F877C00B265E0 /* fullScreenWindow.m */; };
+		0172170C152F890C00B265E0 /* DoodleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172170B152F890C00B265E0 /* DoodleView.m */; };
+		0172170E152F98AA00B265E0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0172170D152F98AA00B265E0 /* Carbon.framework */; };
+		01721711152FAC6900B265E0 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01721710152FAC6900B265E0 /* DDHotKeyCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,25 +34,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014A1564152FEF58000348D8 /* screenDoodle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "screenDoodle-Info.plist"; sourceTree = "<group>"; };
 		017216CF152F874F00B265E0 /* screenDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = screenDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		017216D3152F874F00B265E0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		017216D6152F874F00B265E0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		017216D7152F874F00B265E0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		017216D8152F874F00B265E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		017216DB152F874F00B265E0 /* screenDoodle-Info.plist */ = {isa = PBXFileReference; path = "screenDoodle-Info.plist"; sourceTree = "<group>"; };
 		017216DD152F874F00B265E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		017216DF152F874F00B265E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		017216E1152F874F00B265E0 /* screenDoodle-Prefix.pch */ = {isa = PBXFileReference; path = "screenDoodle-Prefix.pch"; sourceTree = "<group>"; };
+		017216E1152F874F00B265E0 /* screenDoodle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "screenDoodle-Prefix.pch"; sourceTree = "<group>"; };
 		017216E3152F874F00B265E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		017216E5152F874F00B265E0 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		017216E5152F874F00B265E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		017216E6152F874F00B265E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		017216E9152F875000B265E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		017216F0152F875000B265E0 /* screenDoodleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = screenDoodleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		017216F1152F875000B265E0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		017216F8152F875000B265E0 /* screenDoodleTests-Info.plist */ = {isa = PBXFileReference; path = "screenDoodleTests-Info.plist"; sourceTree = "<group>"; };
+		017216F8152F875000B265E0 /* screenDoodleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "screenDoodleTests-Info.plist"; sourceTree = "<group>"; };
 		017216FA152F875000B265E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		017216FC152F875000B265E0 /* screenDoodleTests.h */ = {isa = PBXFileReference; path = screenDoodleTests.h; sourceTree = "<group>"; };
+		017216FC152F875000B265E0 /* screenDoodleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = screenDoodleTests.h; sourceTree = "<group>"; };
 		017216FD152F875000B265E0 /* screenDoodleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = screenDoodleTests.m; sourceTree = "<group>"; };
+		01721707152F877C00B265E0 /* fullScreenWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fullScreenWindow.h; sourceTree = "<group>"; };
+		01721708152F877C00B265E0 /* fullScreenWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fullScreenWindow.m; sourceTree = "<group>"; };
+		0172170A152F890C00B265E0 /* DoodleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoodleView.h; sourceTree = "<group>"; };
+		0172170B152F890C00B265E0 /* DoodleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoodleView.m; sourceTree = "<group>"; };
+		0172170D152F98AA00B265E0 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		0172170F152FAC6900B265E0 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
+		01721710152FAC6900B265E0 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0172170E152F98AA00B265E0 /* Carbon.framework in Frameworks */,
 				017216D4152F874F00B265E0 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +106,7 @@
 		017216D2152F874F00B265E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0172170D152F98AA00B265E0 /* Carbon.framework */,
 				017216D3152F874F00B265E0 /* Cocoa.framework */,
 				017216F1152F875000B265E0 /* SenTestingKit.framework */,
 				017216D5152F874F00B265E0 /* Other Frameworks */,
@@ -114,9 +127,15 @@
 		017216D9152F874F00B265E0 /* screenDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				0172170F152FAC6900B265E0 /* DDHotKeyCenter.h */,
+				01721710152FAC6900B265E0 /* DDHotKeyCenter.m */,
 				017216E5152F874F00B265E0 /* AppDelegate.h */,
 				017216E6152F874F00B265E0 /* AppDelegate.m */,
 				017216E8152F875000B265E0 /* MainMenu.xib */,
+				01721707152F877C00B265E0 /* fullScreenWindow.h */,
+				0172170A152F890C00B265E0 /* DoodleView.h */,
+				0172170B152F890C00B265E0 /* DoodleView.m */,
+				01721708152F877C00B265E0 /* fullScreenWindow.m */,
 				017216DA152F874F00B265E0 /* Supporting Files */,
 			);
 			path = screenDoodle;
@@ -125,7 +144,7 @@
 		017216DA152F874F00B265E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				017216DB152F874F00B265E0 /* screenDoodle-Info.plist */,
+				014A1564152FEF58000348D8 /* screenDoodle-Info.plist */,
 				017216DC152F874F00B265E0 /* InfoPlist.strings */,
 				017216DF152F874F00B265E0 /* main.m */,
 				017216E1152F874F00B265E0 /* screenDoodle-Prefix.pch */,
@@ -263,6 +282,9 @@
 			files = (
 				017216E0152F874F00B265E0 /* main.m in Sources */,
 				017216E7152F874F00B265E0 /* AppDelegate.m in Sources */,
+				01721709152F877C00B265E0 /* fullScreenWindow.m in Sources */,
+				0172170C152F890C00B265E0 /* DoodleView.m in Sources */,
+				01721711152FAC6900B265E0 /* DDHotKeyCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +392,7 @@
 		01721702152F875000B265E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "screenDoodle/screenDoodle-Prefix.pch";
 				INFOPLIST_FILE = "screenDoodle/screenDoodle-Info.plist";
@@ -381,6 +404,7 @@
 		01721703152F875000B265E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "screenDoodle/screenDoodle-Prefix.pch";
 				INFOPLIST_FILE = "screenDoodle/screenDoodle-Info.plist";
@@ -436,6 +460,7 @@
 				01721703152F875000B265E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01721704152F875000B265E0 /* Build configuration list for PBXNativeTarget "screenDoodleTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +469,7 @@
 				01721706152F875000B265E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
