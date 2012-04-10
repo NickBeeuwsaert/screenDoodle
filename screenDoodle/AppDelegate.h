@@ -10,8 +10,5 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSMenu *statusMenu;
-@property (assign) NSStatusItem *statusItem;
-@property BOOL active;
 
 @end
