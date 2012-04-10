@@ -2,7 +2,7 @@ IT'S A README
 =============
 Yeah, so I need to doodle on my screen for like presentations and stuff, and I couldn't find anything suitable
 
-* SO I MADE THIS *
+*SO I MADE THIS*
 
 Shortcuts!
 ----------
