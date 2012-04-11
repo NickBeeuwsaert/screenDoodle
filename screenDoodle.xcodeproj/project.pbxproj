@@ -20,25 +20,11 @@
 		017216E4152F874F00B265E0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 017216E2152F874F00B265E0 /* Credits.rtf */; };
 		017216E7152F874F00B265E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 017216E6152F874F00B265E0 /* AppDelegate.m */; };
 		017216EA152F875000B265E0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017216E8152F875000B265E0 /* MainMenu.xib */; };
-		017216F2152F875000B265E0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017216F1152F875000B265E0 /* SenTestingKit.framework */; };
-		017216F3152F875000B265E0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017216D3152F874F00B265E0 /* Cocoa.framework */; };
-		017216FB152F875000B265E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017216F9152F875000B265E0 /* InfoPlist.strings */; };
-		017216FE152F875000B265E0 /* screenDoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 017216FD152F875000B265E0 /* screenDoodleTests.m */; };
 		01721709152F877C00B265E0 /* fullScreenWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 01721708152F877C00B265E0 /* fullScreenWindow.m */; };
 		0172170C152F890C00B265E0 /* DoodleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172170B152F890C00B265E0 /* DoodleView.m */; };
 		0172170E152F98AA00B265E0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0172170D152F98AA00B265E0 /* Carbon.framework */; };
 		01721711152FAC6900B265E0 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01721710152FAC6900B265E0 /* DDHotKeyCenter.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		017216F4152F875000B265E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 017216C6152F874F00B265E0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 017216CE152F874F00B265E0;
-			remoteInfo = screenDoodle;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		014A1564152FEF58000348D8 /* screenDoodle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "screenDoodle-Info.plist"; sourceTree = "<group>"; };
@@ -63,12 +49,7 @@
 		017216E5152F874F00B265E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		017216E6152F874F00B265E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		017216E9152F875000B265E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		017216F0152F875000B265E0 /* screenDoodleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = screenDoodleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		017216F1152F875000B265E0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		017216F8152F875000B265E0 /* screenDoodleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "screenDoodleTests-Info.plist"; sourceTree = "<group>"; };
-		017216FA152F875000B265E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		017216FC152F875000B265E0 /* screenDoodleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = screenDoodleTests.h; sourceTree = "<group>"; };
-		017216FD152F875000B265E0 /* screenDoodleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = screenDoodleTests.m; sourceTree = "<group>"; };
 		01721707152F877C00B265E0 /* fullScreenWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fullScreenWindow.h; sourceTree = "<group>"; };
 		01721708152F877C00B265E0 /* fullScreenWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fullScreenWindow.m; sourceTree = "<group>"; };
 		0172170A152F890C00B265E0 /* DoodleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoodleView.h; sourceTree = "<group>"; };
@@ -88,15 +69,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		017216EC152F875000B265E0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				017216F2152F875000B265E0 /* SenTestingKit.framework in Frameworks */,
-				017216F3152F875000B265E0 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				017216D9152F874F00B265E0 /* screenDoodle */,
-				017216F6152F875000B265E0 /* screenDoodleTests */,
 				017216D2152F874F00B265E0 /* Frameworks */,
 				017216D0152F874F00B265E0 /* Products */,
 			);
@@ -114,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				017216CF152F874F00B265E0 /* screenDoodle.app */,
-				017216F0152F875000B265E0 /* screenDoodleTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,25 +148,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		017216F6152F875000B265E0 /* screenDoodleTests */ = {
-			isa = PBXGroup;
-			children = (
-				017216FC152F875000B265E0 /* screenDoodleTests.h */,
-				017216FD152F875000B265E0 /* screenDoodleTests.m */,
-				017216F7152F875000B265E0 /* Supporting Files */,
-			);
-			path = screenDoodleTests;
-			sourceTree = "<group>";
-		};
-		017216F7152F875000B265E0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				017216F8152F875000B265E0 /* screenDoodleTests-Info.plist */,
-				017216F9152F875000B265E0 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,25 +167,6 @@
 			productName = screenDoodle;
 			productReference = 017216CF152F874F00B265E0 /* screenDoodle.app */;
 			productType = "com.apple.product-type.application";
-		};
-		017216EF152F875000B265E0 /* screenDoodleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 01721704152F875000B265E0 /* Build configuration list for PBXNativeTarget "screenDoodleTests" */;
-			buildPhases = (
-				017216EB152F875000B265E0 /* Sources */,
-				017216EC152F875000B265E0 /* Frameworks */,
-				017216ED152F875000B265E0 /* Resources */,
-				017216EE152F875000B265E0 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				017216F5152F875000B265E0 /* PBXTargetDependency */,
-			);
-			name = screenDoodleTests;
-			productName = screenDoodleTests;
-			productReference = 017216F0152F875000B265E0 /* screenDoodleTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -258,7 +190,6 @@
 			projectRoot = "";
 			targets = (
 				017216CE152F874F00B265E0 /* screenDoodle */,
-				017216EF152F875000B265E0 /* screenDoodleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -279,31 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		017216ED152F875000B265E0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				017216FB152F875000B265E0 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		017216EE152F875000B265E0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		017216CB152F874F00B265E0 /* Sources */ = {
@@ -320,23 +227,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		017216EB152F875000B265E0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				017216FE152F875000B265E0 /* screenDoodleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		017216F5152F875000B265E0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 017216CE152F874F00B265E0 /* screenDoodle */;
-			targetProxy = 017216F4152F875000B265E0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		017216DC152F874F00B265E0 /* InfoPlist.strings */ = {
@@ -361,14 +252,6 @@
 				017216E9152F875000B265E0 /* en */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		017216F9152F875000B265E0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				017216FA152F875000B265E0 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -447,34 +330,6 @@
 			};
 			name = Release;
 		};
-		01721705152F875000B265E0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/screenDoodle.app/Contents/MacOS/screenDoodle";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "screenDoodle/screenDoodle-Prefix.pch";
-				INFOPLIST_FILE = "screenDoodleTests/screenDoodleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		01721706152F875000B265E0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/screenDoodle.app/Contents/MacOS/screenDoodle";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "screenDoodle/screenDoodle-Prefix.pch";
-				INFOPLIST_FILE = "screenDoodleTests/screenDoodleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -492,15 +347,6 @@
 			buildConfigurations = (
 				01721702152F875000B265E0 /* Debug */,
 				01721703152F875000B265E0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		01721704152F875000B265E0 /* Build configuration list for PBXNativeTarget "screenDoodleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				01721705152F875000B265E0 /* Debug */,
-				01721706152F875000B265E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

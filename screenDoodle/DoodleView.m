@@ -105,7 +105,31 @@
         [p stroke];
         [p release];
     }*/
-    
+    // If there are no doodles tell the user how to exit, or something
+    if([bezierDoodles count] == 0){
+        NSBezierPath *exitNotification;
+        NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+        NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+        [style setAlignment:NSCenterTextAlignment];
+        [attributes setObject:style forKey:NSParagraphStyleAttributeName];
+        [attributes setObject:[NSColor whiteColor] forKey:NSForegroundColorAttributeName];
+        [attributes setObject:[NSFont fontWithName:@"Helvetica Neue" size:12] forKey:NSFontAttributeName];
+        NSString *exitMessage = @"Press\n\u2303 `\nto exit!";
+        NSSize size = [exitMessage sizeWithAttributes:attributes];
+        
+        NSRect rect = NSMakeRect(dirtyRect.size.width-160, (dirtyRect.size.height-(size.height+20 + [[NSApp mainMenu] menuBarHeight])), 150, size.height+10);
+        exitNotification = [[NSBezierPath alloc] init];
+        [exitNotification appendBezierPathWithRoundedRect:rect xRadius:10 yRadius:10];
+        NSColor *HUDColor = [NSColor colorWithSRGBRed:0.3 green:0.3 blue:0.3 alpha:0.8];
+        [HUDColor setFill];
+        
+        [exitNotification fill];
+        [exitMessage drawInRect:NSInsetRect(rect, 1.0, 1.0) withAttributes:attributes];
+        [style release];
+        [attributes release];
+        //[asdf release];
+        [exitNotification release];
+    }
     //[p setLineCapStyle:NSRoundLineCapStyle];
     [NSBezierPath setDefaultLineCapStyle:NSRoundLineCapStyle];
     [NSBezierPath setDefaultLineJoinStyle:NSRoundLineJoinStyle];

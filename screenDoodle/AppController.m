@@ -57,6 +57,7 @@
     [statusItem setImage:extraImage];
     [statusItem setAlternateImage:extraImageAlt];
     [statusItem setHighlightMode:YES];
+    [self toggleVisibility:nil ];
 }
 - (void)bringToFront {
     [_window makeKeyAndOrderFront:nil];
