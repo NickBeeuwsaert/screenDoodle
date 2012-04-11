@@ -18,6 +18,9 @@
 @property (assign) IBOutlet NSMenuItem *greenMenu;
 @property (assign) IBOutlet NSMenuItem *blueMenu;
 @property (assign) PrefController *prefController;
+@property (strong) NSImage *extraImage;
+@property (strong) NSImage *extraImageAlt;
+@property (strong) NSImage *extraImageOn;
 
 @property BOOL active;
 

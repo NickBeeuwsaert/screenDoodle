@@ -13,6 +13,7 @@
 		014A15E715326BC0000348D8 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014A15E615326BC0000348D8 /* AppController.m */; };
 		014A15EA15326DA4000348D8 /* PrefController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014A15E915326DA4000348D8 /* PrefController.m */; };
 		014A15EC1533A603000348D8 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 014A15EB1533A603000348D8 /* Defaults.plist */; };
+		014A15FE1534DE24000348D8 /* MenuExtra-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 014A15FD1534DE23000348D8 /* MenuExtra-glow.png */; };
 		017216D4152F874F00B265E0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017216D3152F874F00B265E0 /* Cocoa.framework */; };
 		017216DE152F874F00B265E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 017216DC152F874F00B265E0 /* InfoPlist.strings */; };
 		017216E0152F874F00B265E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 017216DF152F874F00B265E0 /* main.m */; };
@@ -49,6 +50,7 @@
 		014A15E815326DA4000348D8 /* PrefController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefController.h; sourceTree = "<group>"; };
 		014A15E915326DA4000348D8 /* PrefController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefController.m; sourceTree = "<group>"; };
 		014A15EB1533A603000348D8 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		014A15FD1534DE23000348D8 /* MenuExtra-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuExtra-glow.png"; sourceTree = "<group>"; };
 		017216CF152F874F00B265E0 /* screenDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = screenDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		017216D3152F874F00B265E0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		017216D6152F874F00B265E0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -141,6 +143,7 @@
 		017216D9152F874F00B265E0 /* screenDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				014A15FD1534DE23000348D8 /* MenuExtra-glow.png */,
 				014A15DA15321C37000348D8 /* MenuExtra-alt.png */,
 				014A15D815321A5B000348D8 /* MenuExtra.png */,
 				0172170F152FAC6900B265E0 /* DDHotKeyCenter.h */,
@@ -155,9 +158,9 @@
 				014A15E815326DA4000348D8 /* PrefController.h */,
 				014A15E915326DA4000348D8 /* PrefController.m */,
 				01721707152F877C00B265E0 /* fullScreenWindow.h */,
+				01721708152F877C00B265E0 /* fullScreenWindow.m */,
 				0172170A152F890C00B265E0 /* DoodleView.h */,
 				0172170B152F890C00B265E0 /* DoodleView.m */,
-				01721708152F877C00B265E0 /* fullScreenWindow.m */,
 				017216DA152F874F00B265E0 /* Supporting Files */,
 			);
 			path = screenDoodle;
@@ -272,6 +275,7 @@
 				014A15DB15321C37000348D8 /* MenuExtra-alt.png in Resources */,
 				014A15E4153269F2000348D8 /* Preferences.xib in Resources */,
 				014A15EC1533A603000348D8 /* Defaults.plist in Resources */,
+				014A15FE1534DE24000348D8 /* MenuExtra-glow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@
 @synthesize doodles;
 @synthesize currentColor;
 
+
 - (id)initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];
@@ -74,11 +75,14 @@
         [self setNeedsDisplay:YES];
     }
 }
+
 - (void) awakeFromNib {
     doodles = [[[NSMutableArray alloc] init] retain];
     bezierDoodles = [[[NSMutableArray alloc] init]  retain];
     currentDoodle = [[[NSMutableArray alloc] init] retain];
-    currentColor = [[NSColor redColor] retain];
+    //currentColor = [[NSColor redColor] retain];
+    currentColor = [[NSUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] dataForKey:@"CustomColor00"] ]retain];
+    [[self window] setAcceptsMouseMovedEvents:YES];
 }
 - (void)drawRect:(NSRect)dirtyRect
 {
@@ -101,10 +105,14 @@
         [p stroke];
         [p release];
     }*/
+    
+    //[p setLineCapStyle:NSRoundLineCapStyle];
+    [NSBezierPath setDefaultLineCapStyle:NSRoundLineCapStyle];
+    [NSBezierPath setDefaultLineJoinStyle:NSRoundLineJoinStyle];
     //begin drawing bezier doodles
     for(NSArray* D in bezierDoodles){
         NSBezierPath * p = [[NSBezierPath bezierPath] retain];
-        [p setLineCapStyle:NSRoundLineCapStyle];
+        //[p setLineCapStyle:NSRoundLineCapStyle];
         NSArray *d = [D objectAtIndex:1];
         for(NSInteger i = 0; i < [d count]-1; i++){
             if([p isEmpty]){
@@ -128,7 +136,6 @@
     }
     // Stop drawing bezier doodles
     NSBezierPath * p = [[NSBezierPath bezierPath] retain];
-    [p setLineCapStyle:NSRoundLineCapStyle];
     for(NSValue *point in currentDoodle){
         if([p isEmpty]){
             [p moveToPoint:[point pointValue]];

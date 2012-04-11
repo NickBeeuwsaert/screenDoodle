@@ -9,6 +9,7 @@
 #import "AppController.h"
 #import "DoodleView.h"
 #import "DDHotKeyCenter.h"
+#import "PrefController.h"
 @implementation AppController
 @synthesize window = _window;
 @synthesize statusItem;
@@ -18,7 +19,7 @@
 @synthesize blueMenu;
 @synthesize greenMenu; 
 @synthesize prefController;
-
+@synthesize extraImage, extraImageAlt, extraImageOn;
 - (void) awakeFromNib {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ApplePersistenceIgnoreState"];
     
@@ -48,19 +49,20 @@
     [hotkeyCenter registerHotKeyWithKeyCode:0x1D modifierFlags:NSControlKeyMask task:clear];
     [hotkeyCenter release];
     [_window orderOut:nil];
-
+    extraImage = [[NSImage alloc ]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"MenuExtra" ofType:@"png"]];
+    extraImageAlt = [[NSImage alloc ]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"MenuExtra-alt" ofType:@"png"]];
+    extraImageOn = [[NSImage alloc ]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"MenuExtra-glow" ofType:@"png"]];
     statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
     [statusItem setMenu:statusMenu];
-    [statusItem setImage:
-     [[NSImage alloc ]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"MenuExtra" ofType:@"png"]]];
-    [statusItem setAlternateImage:
-     [[NSImage alloc ]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"MenuExtra-alt" ofType:@"png"]]];
+    [statusItem setImage:extraImage];
+    [statusItem setAlternateImage:extraImageAlt];
     [statusItem setHighlightMode:YES];
 }
 - (void)bringToFront {
     [_window makeKeyAndOrderFront:nil];
     [_window setLevel:NSMainMenuWindowLevel+1];
     [self setActive:YES];
+    [statusItem setImage:extraImageOn];
     
 }
 - (IBAction) toggleVisibility:(id)sender {
@@ -74,6 +76,7 @@
 - (void) sendToBack {
     [_window orderOut:nil];
     [self setActive:NO];
+    [statusItem setImage:extraImage];
 }
 - (IBAction)clearDoodles:(id)sender {
     [[(DoodleView*)[_window contentView] doodles] removeAllObjects];
@@ -117,5 +120,6 @@
         prefController = [[PrefController alloc] init];
     }
     [prefController showWindow:self];
+    [[prefController window] makeKeyAndOrderFront:nil];
 }
 @end
