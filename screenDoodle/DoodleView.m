@@ -39,13 +39,20 @@
     //distances...
     float d01 = sqrtf(pow(p1.x - p0.x,2) + pow(p1.y - p0.y,2));
     float d12 = sqrtf(pow(p1.x - p2.x,2) + pow(p1.y - p2.y,2));
+    if(d01 == 0){
+        //NSLog(@"D01 is ZERO!");
+        d01+=0.5;
+    }
+    if(d12 == 0){
+        //NSLog(@"D12 is ZERO!");
+        d12+=0.5;
+    }
     //width, height
     float w = p2.x - p0.x;
     float h = p2.y - p0.y;
     
     float fa = t * d01/ (d01+d12);
     float fb = t * d12/ (d01+d12);
-    
     NSValue *P1 = [NSValue valueWithPoint:NSMakePoint(p1.x - fa * w, p1.y - fa * h)];
     NSValue *P2 = [NSValue valueWithPoint:NSMakePoint(p1.x + fb * w, p1.y + fb * h)];
     NSValue *P3 = [NSValue valueWithPoint:p1];
@@ -138,14 +145,31 @@
         NSBezierPath * p = [[NSBezierPath bezierPath] retain];
         //[p setLineCapStyle:NSRoundLineCapStyle];
         NSArray *d = [D objectAtIndex:1];
-        for(NSInteger i = 0; i < [d count]-1; i++){
-            if([p isEmpty]){
+        for(NSInteger i = 0; i < [d count]-1; i++){            if([p isEmpty]){
                 NSPoint p3 = [[d objectAtIndex:i]pointValue];
                 [p moveToPoint:p3];
             }else{
              NSPoint p1 = [[[d objectAtIndex:i] objectAtIndex:1] pointValue];
                 NSPoint p2 = [[[d objectAtIndex:i+1] objectAtIndex:0] pointValue];
                 NSPoint p3 = [[[d objectAtIndex:i+1] objectAtIndex:2] pointValue];
+                NSSize s = [[NSScreen mainScreen]visibleFrame].size;
+                if(p1.x > s.width  ||
+                   p1.y > s.height ||
+                   p2.x > s.width  ||
+                   p2.y > s.height ||
+                   p3.x > s.width  ||
+                   p3.y > s.height ||
+                   
+                   p1.x < 0  ||
+                   p1.y < 0 ||
+                   p2.x < 0  ||
+                   p2.y < 0 ||
+                   p3.x < 0  ||
+                   p3.y < 0){
+                }
+                //NSLog(@"Oh! No! p1: %@ p2: %@ p3: %@", NSStringFromPoint(p1), 
+                //      NSStringFromPoint(p2), 
+                //      NSStringFromPoint(p3));
              [p curveToPoint:p3 controlPoint1:p1 controlPoint2:p2];
             }
         }
