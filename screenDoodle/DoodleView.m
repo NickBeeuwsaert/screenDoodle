@@ -145,28 +145,15 @@
         NSBezierPath * p = [[NSBezierPath bezierPath] retain];
         //[p setLineCapStyle:NSRoundLineCapStyle];
         NSArray *d = [D objectAtIndex:1];
-        for(NSInteger i = 0; i < [d count]-1; i++){            if([p isEmpty]){
+        for(NSInteger i = 0; i < [d count]-1; i++){
+            if(/*[p isEmpty]*/ i==0){
                 NSPoint p3 = [[d objectAtIndex:i]pointValue];
                 [p moveToPoint:p3];
             }else{
              NSPoint p1 = [[[d objectAtIndex:i] objectAtIndex:1] pointValue];
                 NSPoint p2 = [[[d objectAtIndex:i+1] objectAtIndex:0] pointValue];
                 NSPoint p3 = [[[d objectAtIndex:i+1] objectAtIndex:2] pointValue];
-                NSSize s = [[NSScreen mainScreen]visibleFrame].size;
-                if(p1.x > s.width  ||
-                   p1.y > s.height ||
-                   p2.x > s.width  ||
-                   p2.y > s.height ||
-                   p3.x > s.width  ||
-                   p3.y > s.height ||
-                   
-                   p1.x < 0  ||
-                   p1.y < 0 ||
-                   p2.x < 0  ||
-                   p2.y < 0 ||
-                   p3.x < 0  ||
-                   p3.y < 0){
-                }
+
                 //NSLog(@"Oh! No! p1: %@ p2: %@ p3: %@", NSStringFromPoint(p1), 
                 //      NSStringFromPoint(p2), 
                 //      NSStringFromPoint(p3));
